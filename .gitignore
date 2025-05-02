@@ -1,0 +1,47 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+env/
+.venv/
+venv/
+ENV/
+
+# Jupyter/IPython
+.ipynb_checkpoints/
+
+# VS Code / Visual Studio
+.vscode/
+*.code-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vcxproj.*
+*.pdb
+*.obj
+*.idb
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Logs and debug output
+*.log
+debug_*.csv
+unmatched_rows.csv
+
+# You are intentionally keeping all .csv files EXCEPT temp/debug
+# Don't ignore *.csv globally!
