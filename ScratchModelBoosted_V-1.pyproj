@@ -26,6 +26,7 @@
     <Compile Include="get_scores_full.py" />
     <Compile Include="merge_predictions.py" />
     <Compile Include="predict_over_4_5.py" />
+    <Compile Include="run_pipeline_and_push.py" />
     <Compile Include="Scrape_Fan_Graph.py" />
     <Compile Include="train_model.py" />
   </ItemGroup>

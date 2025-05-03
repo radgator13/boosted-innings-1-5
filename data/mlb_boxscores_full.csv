@@ -475,21 +475,21 @@ Game Date,Away Team,Home Team,Away Record,Away Score,Home Record,Home Score,Away
 2025-05-01,Kansas City Royals,Tampa Bay Rays,17-15,8.0,14-17,2.0,0,1,0,0,0,0,1,0,3,0,3,1,0,0,1,0,0,0,1.0
 2025-05-01,Athletics,Texas Rangers,17-15,3.0,16-16,0.0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1.0
 2025-05-01,Boston Red Sox,Toronto Blue Jays,17-16,2.0,15-16,4.0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,3,0,0,0.0
-2025-05-02,Los Angeles Dodgers,Atlanta Braves,22-10,2,14-17,1,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0.0
-2025-05-02,Kansas City Royals,Baltimore Orioles,17-16,0,13-18,3,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0.0
-2025-05-02,Minnesota Twins,Boston Red Sox,13-20,1,18-16,6,0,1,0,0,1,0,0,0,0,0,0,0,0,2,0,3,0,0,1.0
-2025-05-02,Houston Astros,Chicago White Sox,16-15,3,9-23,7,0,1,0,1,0,0,1,0,0,2,1,0,0,0,1,3,0,0,1.0
-2025-05-02,Washington Nationals,Cincinnati Reds,14-19,1,18-15,6,0,2,0,1,0,2,0,0,1,0,0,1,0,0,0,0,0,0,1.0
-2025-05-02,Detroit Tigers,Los Angeles Angels,21-12,9,12-19,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,8,0,1.0
-2025-05-02,Athletics,Miami Marlins,18-15,6,12-19,1,0,0,2,0,1,0,0,0,3,0,0,1,0,0,0,0,0,0,0.0
-2025-05-02,Chicago Cubs,Milwaukee Brewers,20-13,10,16-17,0,2,0,7,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1.0
-2025-05-02,Tampa Bay Rays,New York Yankees,14-18,0,19-13,3,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0.0
-2025-05-02,Arizona Diamondbacks,Philadelphia Phillies,17-15,2,18-14,3,0,1,0,0,0,0,1,0,0,0,1,0,0,2,0,0,0,0,1.0
-2025-05-02,San Diego Padres,Pittsburgh Pirates,20-11,9,12-21,4,0,0,0,0,0,1,2,1,3,1,0,1,0,0,3,0,1,0,0.0
-2025-05-02,Colorado Rockies,San Francisco Giants,6-26,0,20-13,4,0,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-02,New York Mets,St. Louis Cardinals,22-11,9,14-19,3,0,1,2,0,0,2,0,0,4,0,0,0,2,0,0,0,1,0,1.0
-2025-05-02,Seattle Mariners,Texas Rangers,19-12,13,16-17,1,0,0,0,0,0,0,1,0,7,0,2,0,0,0,0,0,3,1,0.0
-2025-05-02,Cleveland Guardians,Toronto Blue Jays,18-14,3,16-16,5,0,0,1,0,0,2,1,0,0,1,1,0,0,0,0,2,0,0,0.0
+2025-05-02,Los Angeles Dodgers,Atlanta Braves,22-10,2.0,14-17,1.0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0,0,0,0,0.0
+2025-05-02,Kansas City Royals,Baltimore Orioles,17-16,0.0,13-18,3.0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0.0
+2025-05-02,Minnesota Twins,Boston Red Sox,13-20,1.0,18-16,6.0,0,1,0,0,1,0,0,0,0,0,0,0,0,2,0,3,0,0,1.0
+2025-05-02,Houston Astros,Chicago White Sox,16-15,3.0,9-23,7.0,0,1,0,1,0,0,1,0,0,2,1,0,0,0,1,3,0,0,1.0
+2025-05-02,Washington Nationals,Cincinnati Reds,14-19,1.0,18-15,6.0,0,2,0,1,0,2,0,0,1,0,0,1,0,0,0,0,0,0,1.0
+2025-05-02,Detroit Tigers,Los Angeles Angels,21-12,9.0,12-19,1.0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,8,0,1.0
+2025-05-02,Athletics,Miami Marlins,18-15,6.0,12-19,1.0,0,0,2,0,1,0,0,0,3,0,0,1,0,0,0,0,0,0,0.0
+2025-05-02,Chicago Cubs,Milwaukee Brewers,20-13,10.0,16-17,0.0,2,0,7,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1.0
+2025-05-02,Tampa Bay Rays,New York Yankees,14-18,0.0,19-13,3.0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0.0
+2025-05-02,Arizona Diamondbacks,Philadelphia Phillies,17-15,2.0,18-14,3.0,0,1,0,0,0,0,1,0,0,0,1,0,0,2,0,0,0,0,1.0
+2025-05-02,San Diego Padres,Pittsburgh Pirates,20-11,9.0,12-21,4.0,0,0,0,0,0,1,2,1,3,1,0,1,0,0,3,0,1,0,0.0
+2025-05-02,Colorado Rockies,San Francisco Giants,6-26,0.0,20-13,4.0,0,0,0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0.0
+2025-05-02,New York Mets,St. Louis Cardinals,22-11,9.0,14-19,3.0,0,1,2,0,0,2,0,0,4,0,0,0,2,0,0,0,1,0,1.0
+2025-05-02,Seattle Mariners,Texas Rangers,19-12,13.0,16-17,1.0,0,0,0,0,0,0,1,0,7,0,2,0,0,0,0,0,3,1,0.0
+2025-05-02,Cleveland Guardians,Toronto Blue Jays,18-14,3.0,16-16,5.0,0,0,1,0,0,2,1,0,0,1,1,0,0,0,0,2,0,0,0.0
 2025-05-03,Los Angeles Dodgers,Atlanta Braves,22-10,,14-17,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
 2025-05-03,Kansas City Royals,Baltimore Orioles,17-16,,13-18,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
 2025-05-03,Minnesota Twins,Boston Red Sox,13-20,,18-16,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
