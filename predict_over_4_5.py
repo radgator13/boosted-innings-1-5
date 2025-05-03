@@ -94,7 +94,7 @@ games_pred[[
     "Game_Date", "Home_Team", "Away_Team",
     "Predicted_Over_4_5", "Actual_Over_4_5", "Runs_1_5",
     "Confidence", "Model_Total", "is_pending"
-]].to_csv("mlb_predictions.csv", index=False)
+]].to_csv("data/mlb_predictions.csv", index=False)
 
 
 print("✅ Predictions saved to mlb_predictions.csv")

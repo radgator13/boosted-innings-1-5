@@ -1,6 +1,6 @@
 ﻿import streamlit as st
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 from scipy.stats import norm
 
 st.set_page_config(layout="wide")
@@ -43,10 +43,16 @@ def check_correct(row):
 if view == "Daily Predictions":
     st.title("🔥 MLB Over 4.5 Prediction Dashboard")
 
-    available_dates = df["Game_Date"].dt.date.unique()
+    # Include today + tomorrow even if predictions not available yet
+    available_dates = set(df["Game_Date"].dt.date.unique())
+    today = datetime.now().date()
+    tomorrow = today + timedelta(days=1)
+    available_dates.update([today, tomorrow])
+    available_dates = sorted(available_dates)
+
     selected_date = st.date_input(
         "📅 Select Game Date",
-        value=available_dates[-1],
+        value=tomorrow if tomorrow in available_dates else available_dates[-1],
         min_value=min(available_dates),
         max_value=max(available_dates)
     )
@@ -57,22 +63,26 @@ if view == "Daily Predictions":
     daily = df[df["Game_Date"].dt.date == selected_date].copy()
     season_to_date = df[df["Game_Date"].dt.date <= selected_date].copy()
 
-    daily["Matchup"] = daily["Away_Team"] + " @ " + daily["Home_Team"]
-    daily["Model Total"] = daily["Model_Total"].round(2)
-    daily["Bet"] = daily["Model Total"].apply(lambda x: f"OVER {target_total}" if x > target_total else f"UNDER {target_total}")
-    daily["Confidence"] = daily.apply(lambda row: get_dynamic_confidence(row["Model Total"], target_total, row["Bet"]), axis=1)
-    daily = daily[daily["Confidence"] >= min_conf].copy()
-    daily["Confidence 🔥"] = daily["Confidence"].apply(fireballs)
-    daily["Actual Runs"] = daily["Actual Runs"].fillna("—")
-    daily["Correct"] = daily.apply(check_correct, axis=1)
+    if daily.empty:
+        st.warning("⚠️ No predictions found for this date. Make sure you've merged data using `merge_predictions.py`.")
 
-    st.subheader(f"🎯 Predictions for {selected_date.strftime('%B %d, %Y')} (Confidence ≥ {min_conf})")
-    st.dataframe(daily[["Matchup", "Bet", "Confidence 🔥", "Model Total", "Actual Runs", "Correct"]], use_container_width=True)
+    else:
+        daily["Matchup"] = daily["Away_Team"] + " @ " + daily["Home_Team"]
+        daily["Model Total"] = daily["Model_Total"].round(2)
+        daily["Bet"] = daily["Model Total"].apply(lambda x: f"OVER {target_total}" if x > target_total else f"UNDER {target_total}")
+        daily["Confidence"] = daily.apply(lambda row: get_dynamic_confidence(row["Model Total"], target_total, row["Bet"]), axis=1)
+        daily = daily[daily["Confidence"] >= min_conf].copy()
+        daily["Confidence 🔥"] = daily["Confidence"].apply(fireballs)
+        daily["Actual Runs"] = daily["Actual Runs"].fillna("—")
+        daily["Correct"] = daily.apply(check_correct, axis=1)
 
-    if not daily.empty:
-        total = daily["Correct"].notna().sum()
-        correct = daily["Correct"].sum()
-        st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({correct}/{total})")
+        st.subheader(f"🎯 Predictions for {selected_date.strftime('%B %d, %Y')} (Confidence ≥ {min_conf})")
+        st.dataframe(daily[["Matchup", "Bet", "Confidence 🔥", "Model Total", "Actual Runs", "Correct"]], use_container_width=True)
+
+        if not daily.empty:
+            total = daily["Correct"].notna().sum()
+            correct = daily["Correct"].sum()
+            st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({correct}/{total})")
 
     if not season_to_date.empty:
         season = season_to_date.copy()

@@ -4,8 +4,8 @@ import joblib
 from datetime import datetime, timedelta
 
 # === Load model & scaler ===
-model = joblib.load("rf_model_over_4_5.joblib")
-scaler = joblib.load("scaler_over_4_5.joblib")
+model = joblib.load("models/rf_model_over_4_5.joblib")
+scaler = joblib.load("models/scaler_over_4_5.joblib")
 
 # === Load game data ===
 games = pd.read_csv("data/mlb_boxscores_full.csv")
@@ -111,7 +111,7 @@ for _, row in played_games.iterrows():
 
 # === Save results
 df = pd.DataFrame(rows)
-df.to_csv("mlb_backfilled_predictions.csv", index=False)
+df.to_csv("data/mlb_backfilled_predictions.csv", index=False)
 
 if not df.empty:
     acc = (df["Predicted_Over_4_5"] == df["Actual_Over_4_5"]).mean()
