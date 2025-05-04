@@ -3,30 +3,30 @@ import sys
 from datetime import datetime
 
 def run(script, optional=False):
-    print(f"\n🚀 Running: {script}")
+    print(f"\n[RUN] {script}")
     try:
         subprocess.run([sys.executable, script], check=True)
-        print(f"✅ Finished: {script}")
+        print(f"[OK] Finished: {script}")
     except subprocess.CalledProcessError:
         if optional:
-            print(f"⚠️ Optional script failed or skipped: {script}")
+            print(f"[WARN] Optional script failed or skipped: {script}")
         else:
-            print(f"❌ Script failed: {script}")
+            print(f"[ERROR] Script failed: {script}")
             sys.exit(1)
 
 def git_push():
-    print("\n📦 Pushing to GitHub...")
-    commit_msg = f"🔄 Auto-update: predictions as of {datetime.now().strftime('%Y-%m-%d %H:%M')}"
+    print("\n[INFO] Pushing to GitHub...")
+    commit_msg = f"Auto-update: predictions as of {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     try:
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", commit_msg], check=True)
         subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("✅ GitHub push complete.")
+        print("[OK] GitHub push complete.")
     except subprocess.CalledProcessError:
-        print("⚠️ Git push failed. Check authentication or remote config.")
+        print("[WARN] Git push failed. Check authentication or remote config.")
 
 if __name__ == "__main__":
-    print("🔁 Starting full boosted innings pipeline...\n")
+    print("[START] Full boosted innings pipeline...\n")
 
     run("Scrape_Fan_Graph.py")
     run("get_scores_full.py")
@@ -36,5 +36,5 @@ if __name__ == "__main__":
     run("backfill_predict_over_4_5.py", optional=True)
 
     git_push()
+    print("\n[COMPLETE] All tasks finished.")
 
-    print("\n✅ All tasks complete.")
