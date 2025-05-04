@@ -1,0 +1,13 @@
+=============================== 
+🚀 Starting full boosted innings pipeline... 
+=============================== 
+ 
+🔄 Running: Scrape_Fan_Graph.py 
+Traceback (most recent call last):
+  File "C:\Users\a1d3r\source\repos\ScratchModelBoosted_V-1\Scrape_Fan_Graph.py", line 13, in <module>
+    print("\U0001f4c2 Looking for .env file...")
+  File "C:\Users\a1d3r\AppData\Local\Programs\Python\Python312\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4c2' in position 0: character maps to <undefined>
+❌ Script failed: Scrape_Fan_Graph.py 

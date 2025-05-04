@@ -35,6 +35,7 @@
     <Content Include=".gitignore" />
     <Content Include="data\mlb_boxscores_full.csv" />
     <Content Include="requirements.txt" />
+    <Content Include="run_pipeline.bat" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />

@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from dotenv import load_dotenv, find_dotenv
 
-print("📂 Looking for .env file...")
+print("[INFO] Looking for .env file...")
 
 # Load credentials
 load_dotenv(find_dotenv())
