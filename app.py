@@ -102,6 +102,15 @@ if view == "Daily Predictions":
     min_conf = st.slider("🔥 Minimum Confidence", 0.50, 1.0, 0.55, 0.01)
 
     daily = df[df["Game_Date"].dt.date == selected_date].copy()
+
+    # ⬇️ Insert deduplication logic
+    daily["Matchup_ID"] = (
+        daily["Game_Date"].astype(str) + "_" +
+        daily["Home_Team"].str.strip() + "_" +
+        daily["Away_Team"].str.strip()
+)
+    daily = daily.sort_values("Confidence", ascending=False)
+    daily = daily.drop_duplicates("Matchup_ID").copy()
     season_to_date = df[df["Game_Date"].dt.date <= selected_date].copy()
 
     if daily.empty:
