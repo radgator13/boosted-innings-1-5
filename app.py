@@ -103,12 +103,11 @@ if view == "Daily Predictions":
 
     daily = df[df["Game_Date"].dt.date == selected_date].copy()
 
-    # ⬇️ Insert deduplication logic
     daily["Matchup_ID"] = (
         daily["Game_Date"].astype(str) + "_" +
         daily["Home_Team"].str.strip() + "_" +
         daily["Away_Team"].str.strip()
-)
+    )
     daily = daily.sort_values("Confidence", ascending=False)
     daily = daily.drop_duplicates("Matchup_ID").copy()
     season_to_date = df[df["Game_Date"].dt.date <= selected_date].copy()
@@ -130,6 +129,19 @@ if view == "Daily Predictions":
         total = daily["Correct"].notna().sum()
         correct = daily["Correct"].sum()
         st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({correct}/{total})")
+
+        # === Rolling Win-Loss Total
+        historical = season_to_date.copy()
+        historical["Bet"] = historical["Model_Total"].apply(lambda x: f"OVER {target_total}" if x > target_total else f"UNDER {target_total}")
+        historical["Confidence"] = historical.apply(lambda row: get_dynamic_confidence(row["Model_Total"], target_total, row["Bet"]), axis=1)
+        historical = historical[historical["Confidence"] >= min_conf].copy()
+        historical["Correct"] = historical.apply(lambda row: check_correct(row) if pd.notna(row["Actual Runs"]) else None, axis=1)
+
+        total_games = historical["Correct"].notna().sum()
+        total_wins = historical["Correct"].sum()
+
+        st.metric("Rolling Accuracy", f"{(total_wins / total_games * 100):.1f}% ({int(total_wins)}/{int(total_games)})")
+
 
 # === Tab 2: Summary & Performance
 elif view == "Summary & Performance":
