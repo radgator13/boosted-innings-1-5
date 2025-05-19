@@ -695,30 +695,45 @@ Game Date,Away Team,Home Team,Away Record,Away Score,Home Record,Home Score,Away
 2025-05-17,Athletics,San Francisco Giants,22-24,0.0,27-19,1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
 2025-05-17,Houston Astros,Texas Rangers,23-22,1.0,25-22,5.0,1,0,0,0,0,1,0,0,0,0,0,2,0,2,0,0,0,0,1.0
 2025-05-17,Detroit Tigers,Toronto Blue Jays,30-16,1.0,22-23,2.0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0.0
-2025-05-18,Colorado Rockies,Arizona Diamondbacks,8-37,,24-22,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-18,Washington Nationals,Baltimore Orioles,20-27,7,15-29,0,1,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.0
-2025-05-18,Atlanta Braves,Boston Red Sox,23-23,3,23-24,4,2,0,0,0,1,4,0,0,0,0,0,0,0,0,0,0,0,0,1.0
-2025-05-18,Chicago White Sox,Chicago Cubs,14-32,0,27-19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,Cleveland Guardians,Cincinnati Reds,25-20,0,23-24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,St. Louis Cardinals,Kansas City Royals,26-20,0,25-22,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,Los Angeles Angels,Los Angeles Dodgers,19-25,,29-17,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-18,Tampa Bay Rays,Miami Marlins,21-24,1,17-27,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,Minnesota Twins,Milwaukee Brewers,26-20,0,21-25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,New York Mets,New York Yankees,29-17,,26-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-18,Pittsburgh Pirates,Philadelphia Phillies,15-31,0,27-18,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,Seattle Mariners,San Diego Padres,25-19,,27-17,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-18,Athletics,San Francisco Giants,22-24,,27-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-18,Houston Astros,Texas Rangers,23-22,0,25-22,3,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0.0
-2025-05-18,Detroit Tigers,Toronto Blue Jays,30-16,2,22-23,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.0
-2025-05-19,Los Angeles Angels,Athletics,19-25,,22-24,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,New York Mets,Boston Red Sox,29-17,,23-24,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Seattle Mariners,Chicago White Sox,25-19,,14-32,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Philadelphia Phillies,Colorado Rockies,27-18,,8-37,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Arizona Diamondbacks,Los Angeles Dodgers,24-22,,29-17,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Chicago Cubs,Miami Marlins,27-19,,17-27,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Baltimore Orioles,Milwaukee Brewers,15-29,,21-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Cleveland Guardians,Minnesota Twins,25-20,,26-20,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Cincinnati Reds,Pittsburgh Pirates,23-24,,15-31,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Kansas City Royals,San Francisco Giants,25-22,,27-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Detroit Tigers,St. Louis Cardinals,30-16,,26-20,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
-2025-05-19,Houston Astros,Tampa Bay Rays,23-22,,21-24,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-18,Colorado Rockies,Arizona Diamondbacks,8-38,0,25-22,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1.0
+2025-05-18,Washington Nationals,Baltimore Orioles,21-27,10,15-30,4,1,0,6,0,0,0,1,0,0,1,0,2,0,1,1,0,1,0,1.0
+2025-05-18,Atlanta Braves,Boston Red Sox,24-23,10,23-25,4,2,0,0,0,1,4,1,0,3,0,0,0,0,0,3,0,0,0,1.0
+2025-05-18,Chicago White Sox,Chicago Cubs,14-33,2,28-19,6,0,1,0,0,0,0,1,0,0,0,0,3,0,1,0,1,1,0,1.0
+2025-05-18,Cleveland Guardians,Cincinnati Reds,25-21,1,24-24,3,0,0,0,0,0,0,0,2,0,0,0,1,1,0,0,0,0,0,0.0
+2025-05-18,St. Louis Cardinals,Kansas City Royals,26-21,1,26-22,2,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0,0.0
+2025-05-18,Los Angeles Angels,Los Angeles Dodgers,20-25,6,29-18,4,3,0,0,0,1,0,0,0,0,1,0,0,0,3,1,0,1,0,1.0
+2025-05-18,Tampa Bay Rays,Miami Marlins,21-25,1,18-27,5,0,0,0,0,1,0,0,3,0,0,0,2,0,0,0,0,0,0,0.0
+2025-05-18,Minnesota Twins,Milwaukee Brewers,26-21,2,22-25,5,0,0,0,1,0,3,1,0,0,0,0,0,1,0,0,1,0,0,0.0
+2025-05-18,New York Mets,New York Yankees,29-18,2,27-19,8,0,2,1,0,0,0,0,0,1,0,0,0,0,0,0,6,0,0,1.0
+2025-05-18,Pittsburgh Pirates,Philadelphia Phillies,15-32,0,28-18,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0.0
+2025-05-18,Seattle Mariners,San Diego Padres,26-19,6,27-18,1,0,1,0,0,0,0,3,0,0,0,1,0,0,0,0,0,2,0,1.0
+2025-05-18,Athletics,San Francisco Giants,22-25,2,28-19,3,0,1,0,0,0,0,2,0,0,0,0,0,0,0,0,2,0,0,1.0
+2025-05-18,Houston Astros,Texas Rangers,24-22,4,25-23,3,0,0,0,0,0,0,0,3,0,0,0,0,1,0,3,0,0,0,0.0
+2025-05-18,Detroit Tigers,Toronto Blue Jays,31-16,3,22-24,2,2,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,1.0
+2025-05-19,Los Angeles Angels,Athletics,20-25,,22-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,New York Mets,Boston Red Sox,29-18,,23-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Seattle Mariners,Chicago White Sox,26-19,,14-33,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Philadelphia Phillies,Colorado Rockies,28-18,,8-38,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Arizona Diamondbacks,Los Angeles Dodgers,25-22,,29-18,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Chicago Cubs,Miami Marlins,28-19,,18-27,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Baltimore Orioles,Milwaukee Brewers,15-30,,22-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Cleveland Guardians,Minnesota Twins,25-21,,26-21,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Cincinnati Reds,Pittsburgh Pirates,24-24,,15-32,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Kansas City Royals,San Francisco Giants,26-22,,28-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Detroit Tigers,St. Louis Cardinals,31-16,,26-21,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-19,Houston Astros,Tampa Bay Rays,24-22,,21-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Los Angeles Angels,Athletics,20-25,,22-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,New York Mets,Boston Red Sox,29-18,,23-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Seattle Mariners,Chicago White Sox,26-19,,14-33,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Philadelphia Phillies,Colorado Rockies,28-18,,8-38,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Arizona Diamondbacks,Los Angeles Dodgers,25-22,,29-18,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Chicago Cubs,Miami Marlins,28-19,,18-27,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Baltimore Orioles,Milwaukee Brewers,15-30,,22-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Cleveland Guardians,Minnesota Twins,25-21,,26-21,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Texas Rangers,New York Yankees,25-23,,27-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Cincinnati Reds,Pittsburgh Pirates,24-24,,15-32,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Kansas City Royals,San Francisco Giants,26-22,,28-19,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Detroit Tigers,St. Louis Cardinals,31-16,,26-21,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Houston Astros,Tampa Bay Rays,24-22,,21-25,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,San Diego Padres,Toronto Blue Jays,27-18,,22-24,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
+2025-05-20,Atlanta Braves,Washington Nationals,24-23,,21-27,,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,Pending,
