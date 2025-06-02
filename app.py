@@ -111,24 +111,33 @@ if view == "Daily Predictions":
         daily["Confidence 🔥"] = daily["Confidence"].apply(fireballs)
         daily["Actual Runs"] = daily["Actual Runs"].fillna("—")
         daily["Correct Symbol"] = daily.apply(mark_correct_symbol, axis=1)
-        daily["Correct"] = daily.apply(mark_correct_numeric, axis=1)
+        daily["Correct"] = daily.apply(mark_correct_numeric, axis=1).astype("boolean")
 
-        st.dataframe(daily[["Matchup", "Bet", "Confidence 🔥", "Model Total", "Actual Runs", "Correct Symbol"]], use_container_width=True)
+        st.dataframe(
+            daily[["Matchup", "Bet", "Confidence 🔥", "Model Total", "Actual Runs", "Correct Symbol"]],
+            use_container_width=True
+        )
 
         correct = daily["Correct"].sum()
         total = daily["Correct"].notna().sum()
-        accuracy = f"{(correct / total * 100):.1f}% ({int(correct)}/{total})" if total > 0 else "—"
-        st.metric("Daily Accuracy", accuracy)
+        if total > 0:
+            st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({int(correct)}/{total})")
+        else:
+            st.metric("Daily Accuracy", "—")
 
+        # Rolling accuracy
         historical = season_to_date.copy()
         historical["Bet"] = historical["Model_Total"].apply(lambda x: f"OVER {target_total}" if x > target_total else f"UNDER {target_total}")
         historical["Confidence"] = historical.apply(lambda row: get_dynamic_confidence(row["Model_Total"], target_total, row["Bet"]), axis=1)
         historical = historical[historical["Confidence"] >= min_conf].copy()
-        historical["Correct"] = historical.apply(mark_correct_numeric, axis=1)
+        historical["Correct"] = historical.apply(mark_correct_numeric, axis=1).astype("boolean")
 
         total_wins = historical["Correct"].sum()
         total_games = historical["Correct"].notna().sum()
-        rolling_accuracy = f"{(total_wins / total_games * 100):.1f}% ({int(total_wins)}/{int(total_games)})" if total_games > 0 else "—"
-        st.metric("Rolling Accuracy", rolling_accuracy)
+        if total_games > 0:
+            st.metric("Rolling Accuracy", f"{(total_wins / total_games * 100):.1f}% ({int(total_wins)}/{int(total_games)})")
+        else:
+            st.metric("Rolling Accuracy", "—")
+
 
 # ✅ Continue with the rest of your tabs as-is.
