@@ -61,9 +61,13 @@ def get_dynamic_confidence(model_total, target, bet_type):
 
 # === Result checker
 def check_correct(row):
-    if isinstance(row["Actual Runs"], float):
-        return row["Actual Runs"] > target_total if row["Bet"].startswith("OVER") else row["Actual Runs"] <= target_total
-    return None
+    if row["Bet"] == "Over" and row["Actual Runs"] != "—":
+        return "✅" if float(row["Actual Runs"]) > 4.5 else "❌"
+    elif row["Bet"] == "Under" and row["Actual Runs"] != "—":
+        return "✅" if float(row["Actual Runs"]) < 4.5 else "❌"
+    else:
+        return "—"
+
 
 # === Assign core model columns globally
 target_total = 4.5
@@ -128,7 +132,11 @@ if view == "Daily Predictions":
 
         total = daily["Correct"].notna().sum()
         correct = daily["Correct"].sum()
-        st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({correct}/{total})")
+        if total > 0:
+            st.metric("Daily Accuracy", f"{(correct / total * 100):.1f}% ({correct}/{total})")
+        else:
+            st.metric("Daily Accuracy", "—")
+
 
         # === Rolling Win-Loss Total
         historical = season_to_date.copy()
