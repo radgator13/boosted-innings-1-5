@@ -248,7 +248,13 @@ elif view == "Top Daily Picks Leaderboard":
     )
     df["Matchup"] = df["Away_Team"] + " @ " + df["Home_Team"]
     df["Date"] = df["Game_Date"].dt.date
-    day = st.selectbox("📅 Pick a date", sorted(df["Date"].unique(), reverse=True))
+    day = st.date_input(
+    "📅 Pick a date",
+    value=max(df["Date"]),
+    min_value=min(df["Date"]),
+    max_value=max(df["Date"])
+)
+
 
     # Select top 5 fireball picks for this day
     top5 = df[(df["Date"] == day) & (df["Fireball_Level"] == 5)].sort_values(
