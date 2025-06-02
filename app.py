@@ -242,12 +242,62 @@ elif view == "Fireball Profit Curve":
 # === Tab 7: Top Daily Picks Leaderboard
 elif view == "Top Daily Picks Leaderboard":
     st.title("🏅 Top Fireball Picks Per Day")
-    df["Fireball_Level"] = (df["Confidence"] * 100).apply(lambda p: 5 if p >= 90 else 4 if p >= 80 else 3 if p >= 70 else 2 if p >= 60 else 1)
+
+    df["Fireball_Level"] = (df["Confidence"] * 100).apply(
+        lambda p: 5 if p >= 90 else 4 if p >= 80 else 3 if p >= 70 else 2 if p >= 60 else 1
+    )
     df["Matchup"] = df["Away_Team"] + " @ " + df["Home_Team"]
     df["Date"] = df["Game_Date"].dt.date
     day = st.selectbox("📅 Pick a date", sorted(df["Date"].unique(), reverse=True))
-    top5 = df[df["Date"] == day].sort_values("Confidence", ascending=False).head(5)
-    st.table(top5[["Matchup", "Model_Total", "Confidence", "Fireball_Level"]])
+
+    # Select top 5 fireball picks for this day
+    top5 = df[(df["Date"] == day) & (df["Fireball_Level"] == 5)].sort_values(
+        "Confidence", ascending=False
+    ).copy()
+
+    if top5.empty:
+        st.warning("⚠️ No 5-fireball picks found for this day.")
+    else:
+        top5["Actual Runs"] = top5["Runs_1_5"].round(1).fillna("—")
+        top5["Result"] = top5.apply(
+            lambda row: (
+                "✅" if (row["Bet"].startswith("OVER") and row["Actual Runs"] > 4.5) or
+                         (row["Bet"].startswith("UNDER") and row["Actual Runs"] < 4.5)
+                else "❌"
+            ) if row["Actual Runs"] != "—" else "—",
+            axis=1
+        )
+
+        st.dataframe(
+            top5[["Matchup", "Model_Total", "Confidence", "Fireball_Level", "Actual Runs", "Result"]],
+            use_container_width=True
+        )
+
+        # Daily summary
+        valid = top5[top5["Result"].isin(["✅", "❌"])]
+        hits = (valid["Result"] == "✅").sum()
+        total = len(valid)
+        acc = f"{(hits / total * 100):.1f}% ({hits}/{total})" if total > 0 else "—"
+        st.metric("🔥 Daily Accuracy for Top Picks", acc)
+
+        # Rolling accuracy up to selected day
+        history = df[(df["Date"] <= day) & (df["Fireball_Level"] == 5)].copy()
+        history = history[history["Runs_1_5"].notna()]
+        history["Actual Runs"] = history["Runs_1_5"].round(1)
+        history["Result"] = history.apply(
+            lambda row: (
+                "✅" if (row["Bet"].startswith("OVER") and row["Actual Runs"] > 4.5) or
+                         (row["Bet"].startswith("UNDER") and row["Actual Runs"] < 4.5)
+                else "❌"
+            ) if row["Actual Runs"] != "—" else "—",
+            axis=1
+        )
+        roll_valid = history[history["Result"].isin(["✅", "❌"])]
+        roll_hits = (roll_valid["Result"] == "✅").sum()
+        roll_total = len(roll_valid)
+        roll_acc = f"{(roll_hits / roll_total * 100):.1f}% ({roll_hits}/{roll_total})" if roll_total > 0 else "—"
+        st.metric("📈 Rolling Accuracy (All Time to This Day)", roll_acc)
+
 
 # === Tab 8: Calendar Heatmap
 elif view == "Calendar Heatmap":
