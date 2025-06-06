@@ -2,7 +2,9 @@ name: Boosted Inning Predictions
 
 on:
   schedule:
-    - cron: '30 13 * * *'  # Runs daily at 8:30 AM EST (13:30 UTC)
+    - cron: '0 3 * * *'   # 10 PM EST
+    - cron: '0 7 * * *'   # 2 AM EST
+    - cron: '0 16 * * *'  # 11 AM EST
   workflow_dispatch:
 
 jobs:
