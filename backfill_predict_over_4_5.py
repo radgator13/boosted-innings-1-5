@@ -44,19 +44,30 @@ history["Form_7"] = history.groupby("Team")["Runs_1_5"].transform(lambda x: x.sh
 # === Run predictions
 rows = []
 
+import glob
+
+# === Run predictions
+rows = []
+
 for _, row in played_games.iterrows():
     game_date = row["Game_Date"].date()
-
-    # Try multiple prior dates to locate stats
     archive_found = False
+
     for offset in range(1, 4):
         prior_date = (game_date - timedelta(days=offset)).strftime("%Y-%m-%d")
-        std_path = f"downloads/archive/{prior_date}/team_standard.csv"
-        adv_path = f"downloads/archive/{prior_date}/team_advanced.csv"
+        archive_dir = f"downloads/archive/{prior_date}/"
 
-        if os.path.exists(std_path) and os.path.exists(adv_path):
+        std_files = glob.glob(os.path.join(archive_dir, "team_standard*.csv"))
+        adv_files = glob.glob(os.path.join(archive_dir, "team_advanced*.csv"))
+
+        if std_files and adv_files:
+            std_path = std_files[0]
+            adv_path = adv_files[0]
+            print(f"✅ Found archive for {prior_date}")
             archive_found = True
             break
+        else:
+            print(f"⛔ Missing archive files in: {archive_dir}")
 
     if not archive_found:
         continue
@@ -64,8 +75,10 @@ for _, row in played_games.iterrows():
     try:
         standard = pd.read_csv(std_path)
         advanced = pd.read_csv(adv_path)
-    except:
+    except Exception as e:
+        print(f"⚠️ Failed to read stats for {prior_date}: {e}")
         continue
+
 
     stats = pd.merge(standard, advanced, on="Tm", suffixes=("_std", "_adv")).rename(columns={"Tm": "Team"})
     home_team = row["Home_Team"]
