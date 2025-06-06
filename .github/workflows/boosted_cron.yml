@@ -1,0 +1,35 @@
+name: Boosted Inning Predictions
+
+on:
+  schedule:
+    - cron: '30 13 * * *'  # Runs daily at 8:30 AM EST (13:30 UTC)
+  workflow_dispatch:
+
+jobs:
+  run-boosted-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: 🚀 Run Boosted Script
+        run: python backfill_predict_over_4_5.py
+
+      - name: 🔄 Commit updates
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "🔄 Boosted update: auto-run predictions" || echo "No changes"
+          git push
