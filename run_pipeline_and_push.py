@@ -15,15 +15,16 @@ def run(script, optional=False):
             sys.exit(1)
 
 def git_push():
-    print("\n[INFO] Pushing to GitHub...")
+    print("\n[INFO] Pushing to GitHub (force)...")
     commit_msg = f"Auto-update: predictions as of {datetime.now().strftime('%Y-%m-%d %H:%M')}"
     try:
         subprocess.run(["git", "add", "."], check=True)
         subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-        subprocess.run(["git", "push", "origin", "main"], check=True)
-        print("[OK] GitHub push complete.")
+        subprocess.run(["git", "push", "--force", "origin", "main"], check=True)
+        print("[OK] Force push complete.")
     except subprocess.CalledProcessError:
-        print("[WARN] Git push failed. Check authentication or remote config.")
+        print("[❌] Git push failed. Manual fix may be required.")
+
 
 if __name__ == "__main__":
     print("[START] Full boosted innings pipeline...\n")
